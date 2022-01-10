@@ -1,0 +1,242 @@
+.no-padding{padding: 0;}
+.no-marging{marging: 0;}
+.display-none{display: none}
+.content{
+    padding-top: 0;
+}
+li{list-style:
+    none;
+  }
+
+.content-header{
+    padding-bottom: 15px;
+}
+.search-area{
+    width: 300px;
+    display: inline-block;
+    margin-top: 16px;
+    color: #000;
+    font-size: 16px;
+    margin-left: 5px;
+}
+.search-area label{cursor: pointer}
+.search-area input.custom-search{background: none;border: 0;color: #000;font-size: 16px;margin-left: 10px;}
+.search-area input.custom-search::placeholder{color: #333;}
+.search-area input.custom-search:focus{outline: 0;}
+.header-fav-icon{width: 30px}
+.header-logo-1{margin: 0 auto;margin-top: 10px; width: 200px;}
+
+/* Color */
+
+/*.skin-green.custom-design .main-header .navbar, .skin-green.skin-green.custom-design .main-header .logo{background-color:
+  #c6ece4;}*/
+.skin-green.custom-design .main-header .navbar, .skin-green.skin-green.custom-design .main-header .logo{background-color:
+        #41a75a;}
+.skin-green.custom-design .main-header .logo:hover,.skin-green.skin-green.custom-design .main-header .navbar .sidebar-toggle:hover{background-color: #b7e0d7;}
+.skin-green.custom-design .main-header .navbar .sidebar-toggle {color: #000;font-size: 16px;}
+.skin-green.custom-design .wrapper, .skin-green.custom-design .main-sidebar, .skin-green.custom-design .left-side {
+    background-color: #3f6315;
+}
+.skin-green.custom-design .sidebar-menu>li:hover>a, .skin-green.custom-design .sidebar-menu>li.active>a, .skin-green.custom-design .sidebar-menu>li.menu-open>a{
+    background:#8ebf57;
+}
+.skin-green.custom-design .sidebar-menu li a.active{
+    color:#fff;background:#9ccc65
+}
+.skin-green.custom-design .sidebar-menu>li>.treeview-menu{
+    background:#577d2b;
+    margin: 0;padding: 0;
+}
+
+.skin-green.custom-design .sidebar a {
+    color: #fff;
+    font-size: 16px;
+}
+
+.card .card-header.card-info{
+  color: #fff;font-weight: bold; font-size: 20px;padding: 10px 20px;}
+.card .card-btn{display: inline-block;}
+.card-info {
+  background: #98d8ae;
+}
+
+.skin-green.custom-design .sidebar-menu .treeview-menu>li>a{color: #c6ece4}
+.skin-green.custom-design .sidebar-menu .treeview-menu>li.active>a, .skin-green.custom-design .sidebar-menu .treeview-menu>li>a:hover{color:#fff}
+
+.skin-green.custom-design .sidebar-menu .treeview-menu>li>a.active{color:#fff;background:#63902e;}
+.treeview-menu .treeview-menu{padding-left: 0;}
+.treeview-menu .treeview-menu li a{padding-left: 25px;}
+.treeview-menu>li.treeview.menu-open>a{background: #87b356}
+.treeview-menu .treeview-menu>li.treeview.menu-open>a{background: #81af4d}
+.treeview-menu .treeview-menu>li.treeview li a{padding-left: 35px;}
+
+/* ./ Color */
+.skin-green.custom-design .box-header{background:#98d8ae;color: #fff;}
+
+
+
+I'm using the following simple custom CSS I wrote to achieve this.
+
+.col-xs-offset-right-12 {
+  margin-right: 100%;
+}
+.col-xs-offset-right-11 {
+  margin-right: 91.66666667%;
+}
+.col-xs-offset-right-10 {
+  margin-right: 83.33333333%;
+}
+.col-xs-offset-right-9 {
+  margin-right: 75%;
+}
+.col-xs-offset-right-8 {
+  margin-right: 66.66666667%;
+}
+.col-xs-offset-right-7 {
+  margin-right: 58.33333333%;
+}
+.col-xs-offset-right-6 {
+  margin-right: 50%;
+}
+.col-xs-offset-right-5 {
+  margin-right: 41.66666667%;
+}
+.col-xs-offset-right-4 {
+  margin-right: 33.33333333%;
+}
+.col-xs-offset-right-3 {
+  margin-right: 25%;
+}
+.col-xs-offset-right-2 {
+  margin-right: 16.66666667%;
+}
+.col-xs-offset-right-1 {
+  margin-right: 8.33333333%;
+}
+.col-xs-offset-right-0 {
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .col-sm-offset-right-12 {
+    margin-right: 100%;
+  }
+  .col-sm-offset-right-11 {
+    margin-right: 91.66666667%;
+  }
+  .col-sm-offset-right-10 {
+    margin-right: 83.33333333%;
+  }
+  .col-sm-offset-right-9 {
+    margin-right: 75%;
+  }
+  .col-sm-offset-right-8 {
+    margin-right: 66.66666667%;
+  }
+  .col-sm-offset-right-7 {
+    margin-right: 58.33333333%;
+  }
+  .col-sm-offset-right-6 {
+    margin-right: 50%;
+  }
+  .col-sm-offset-right-5 {
+    margin-right: 41.66666667%;
+  }
+  .col-sm-offset-right-4 {
+    margin-right: 33.33333333%;
+  }
+  .col-sm-offset-right-3 {
+    margin-right: 25%;
+  }
+  .col-sm-offset-right-2 {
+    margin-right: 16.66666667%;
+  }
+  .col-sm-offset-right-1 {
+    margin-right: 8.33333333%;
+  }
+  .col-sm-offset-right-0 {
+    margin-right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-offset-right-12 {
+    margin-right: 100%;
+  }
+  .col-md-offset-right-11 {
+    margin-right: 91.66666667%;
+  }
+  .col-md-offset-right-10 {
+    margin-right: 83.33333333%;
+  }
+  .col-md-offset-right-9 {
+    margin-right: 75%;
+  }
+  .col-md-offset-right-8 {
+    margin-right: 66.66666667%;
+  }
+  .col-md-offset-right-7 {
+    margin-right: 58.33333333%;
+  }
+  .col-md-offset-right-6 {
+    margin-right: 50%;
+  }
+  .col-md-offset-right-5 {
+    margin-right: 41.66666667%;
+  }
+  .col-md-offset-right-4 {
+    margin-right: 33.33333333%;
+  }
+  .col-md-offset-right-3 {
+    margin-right: 25%;
+  }
+  .col-md-offset-right-2 {
+    margin-right: 16.66666667%;
+  }
+  .col-md-offset-right-1 {
+    margin-right: 8.33333333%;
+  }
+  .col-md-offset-right-0 {
+    margin-right: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-offset-right-12 {
+    margin-right: 100%;
+  }
+  .col-lg-offset-right-11 {
+    margin-right: 91.66666667%;
+  }
+  .col-lg-offset-right-10 {
+    margin-right: 83.33333333%;
+  }
+  .col-lg-offset-right-9 {
+    margin-right: 75%;
+  }
+  .col-lg-offset-right-8 {
+    margin-right: 66.66666667%;
+  }
+  .col-lg-offset-right-7 {
+    margin-right: 58.33333333%;
+  }
+  .col-lg-offset-right-6 {
+    margin-right: 50%;
+  }
+  .col-lg-offset-right-5 {
+    margin-right: 41.66666667%;
+  }
+  .col-lg-offset-right-4 {
+    margin-right: 33.33333333%;
+  }
+  .col-lg-offset-right-3 {
+    margin-right: 25%;
+  }
+  .col-lg-offset-right-2 {
+    margin-right: 16.66666667%;
+  }
+  .col-lg-offset-right-1 {
+    margin-right: 8.33333333%;
+  }
+  .col-lg-offset-right-0 {
+    margin-right: 0;
+  }
+
+}

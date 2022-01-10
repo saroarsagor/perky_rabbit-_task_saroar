@@ -1,0 +1,87 @@
+@extends('backend.dashboard')
+@section('content')
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark"><small class="ml-3 mr-3">User</small><small></small></h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="">User List</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+</div>
+<!-- /.content-header -->
+<div class="content">
+<div class="clearfix"></div>
+<div class="card">
+    <div class="card-header">
+        <ul class="nav nav-tabs align-items-end card-header-tabs w-100">
+            <li class="nav-item">
+                <a class="nav-link active" href="{!! url()->current() !!}"><i class="fa fa-list mr-2"></i>User List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('users.create')}}"><i class="fa fa-plus mr-2"></i>User Create</a>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th width="10%">#</th>
+                    <th>Name</th>
+                    <th>User Id/Email</th>
+                    <th>Role</th>
+                    <th width="20%">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                
+                @foreach($users as $row)
+                <tr style="background-color: #F5F5F5;">
+                    <td>{{ $row->id }}</td>
+                    <td>{{ $row->name }}</td>
+                    <td>{{ $row->email }}</td>
+                    <td>
+                        @if($row->getRoleNames()->isNotEmpty())
+                        <span class="badge badge-success">
+                            {{ $row->getRoleNames()->implode(" ") }}<br>
+                        </span>
+                        @endif
+                    </td>
+                    <td>
+                        
+                        <div class="btn-group">
+                            <a class="btn btn-info btn-sm" href="{{ route('users.edit', $row->id) }}">
+                                <i class="fa fa-lg fa-edit"></i>
+                            </a> &nbsp;
+                            <form method="POST" action="{{ route('users.destroy',$row->id)}}" class="d-inline">
+                                @csrf
+                                @method('delete')
+                                <button data-name="{{ $row->name }}" type="submit" class="btn btn-danger btn-sm delete-confirm">
+                                <i class="fa fa-lg fa-trash"></i>
+                                </button>
+                            </form>
+                           
+                        </div>
+                        
+                    </td>
+                </tr>
+                @endforeach
+                
+            </tbody>
+            
+        </table>
+        
+        <div class="clearfix"></div>
+    </div>
+</div>
+</div>
+@endsection
