@@ -71,13 +71,10 @@ class RegisterController extends Controller
             'email' => 'required', 'string', 'email', 'max:255', 'unique:users',
             'password' => 'required', 'string', 'password_confirmation',
         ]);
-
         $user = new User();
-        
         $user->name = $request->name;
         $user->email = $request->email;
         $user->mobile = $request->mobile;
-        $user->business_name = $request->business_name;
         if($request->password == $request->password_confirmation){
             $user->password = Hash::make($request->password);
             $user->syncRoles('user');
