@@ -13,6 +13,6 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.0
         with:
-          ftp-server: s435.sgp7.mysecurecloudhost.com/public_html
+          ftp-server: s435.sgp7.mysecurecloudhost.com/demo.royal-dhaka.com
           ftp-username: ${{ secrets.USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
