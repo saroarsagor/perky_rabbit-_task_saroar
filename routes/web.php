@@ -7,6 +7,9 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SearchController;
 
+use App\Http\Controllers\BkashController;
+use App\Http\Controllers\BkashRefundController;
+
 //Users & Roles Route Controller Path...
 use App\Http\Controllers\userRoles\RoleController;
 use App\Http\Controllers\userRoles\UserController;
@@ -29,6 +32,24 @@ Route::get('/', [WelcomeController::class, 'index']);
 Route::get('/locale/{locale}', [HomeController::class, 'switchLanguage'])->name('/locale');
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
+
+
+// Payment Routes for bKash
+Route::post('bkash/get-token', [BkashController::class, 'getToken'])->name('bkash-get-token');
+Route::post('bkash/create-payment', [BkashController::class, 'createPayment'])->name('bkash-create-payment');
+Route::post('bkash/execute-payment', [BkashController::class, 'executePayment'])->name('bkash-execute-payment');
+Route::get('bkash/query-payment', [BkashController::class, 'queryPayment'])->name('bkash-query-payment');
+Route::post('bkash/success', [BkashController::class, 'bkashSuccess'])->name('bkash-success');
+
+
+// Refund Routes for bKash
+Route::get('bkash/refund', [BkashRefundController::class, 'index'])->name('bkash-refund');
+Route::post('bkash/refund', [BkashRefundController::class, 'refund'])->name('bkash-refund');
+
+
+
+
+
 
 //Role Permission Routes Here....
 Route::middleware('auth')->prefix('dashboard')->group(function () {

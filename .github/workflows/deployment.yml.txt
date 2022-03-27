@@ -16,3 +16,4 @@ jobs:
           ftp-server: s435.sgp7.mysecurecloudhost.com/demo.royal-dhaka.com
           ftp-username: ${{ secrets.USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
+		  
